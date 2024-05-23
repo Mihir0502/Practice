@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<DapperContext>();
 builder.Services.AddScoped<IUserRepo, UserRepo>();
-
+builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddControllers(); 
 
 
